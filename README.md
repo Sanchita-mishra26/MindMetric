@@ -25,4 +25,4 @@ To use another API URL, copy `.env.example` to `.env`, set `VITE_API_BASE_URL` t
 VITE_API_BASE_URL=http://127.0.0.1:8000
 ```
 
-The FastAPI CORS middleware permits the Vite development origin. `main.py` imports the middleware used in its existing CORS configuration.
+Production builds use the deployed API URL in `.env.production`; local development uses the `.env` override or the localhost default. The FastAPI CORS middleware permits browser requests from the frontend.
